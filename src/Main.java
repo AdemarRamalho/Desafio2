@@ -9,10 +9,10 @@ public class Main {
         List<Pessoa> pessoas = new ArrayList<>();
         List<Endereco> enderecos = new ArrayList<>();
 
-        System.out.print("Digite o nome da pessoa (ou 'sair' para encerrar): ");
+        System.out.print("Digite o nome da pessoa (ou 'buscar' para buscar uma pessoa inserida): ");
         String nome = scanner.nextLine();
 
-        while (!nome.equalsIgnoreCase("sair")) {
+        while (!nome.equalsIgnoreCase("buscar")) {
             System.out.print("Digite a quantidade de endereços: ");
             int quantidadeEnderecos = scanner.nextInt();
             scanner.nextLine();
@@ -39,7 +39,7 @@ public class Main {
             }
 
             pessoas.add(pessoa);
-            System.out.print("\nDigite o nome da pessoa (ou 'sair' para encerrar): ");
+            System.out.print("\nDigite o nome da pessoa (ou 'buscar' para buscar uma pessoa inserida): ");
             nome = scanner.nextLine();
         }
 
@@ -48,7 +48,7 @@ public class Main {
 
         Pessoa pessoaEncontrada = buscarPessoa(pessoas, nomeBuscado);
         if (pessoaEncontrada != null) {
-            System.out.println("\nDados da pessoa encontrada:");
+            System.out.println("\nDados da Busca feita:");
             System.out.println("Nome: " + pessoaEncontrada.getNome());
             System.out.println("Idade: " + pessoaEncontrada.getIdade());
             System.out.println("Endereços: ");
