@@ -9,7 +9,7 @@ public class Main {
         List<Pessoa> pessoas = new ArrayList<>();
         List<Endereco> enderecos = new ArrayList<>();
 
-        System.out.print("Digite o nome da pessoa (ou 'buscar' para buscar uma pessoa inserida): ");
+        System.out.print("Digite o nome da pessoa a ser inserida: ");
         String nome = scanner.nextLine();
 
         while (!nome.equalsIgnoreCase("buscar")) {
@@ -39,7 +39,7 @@ public class Main {
             }
 
             pessoas.add(pessoa);
-            System.out.print("\nDigite o nome da pessoa (ou 'buscar' para buscar uma pessoa inserida): ");
+            System.out.print("\nDigite o nome para inserir uma nova pessoa (ou 'buscar' para buscar uma pessoa inserida): ");
             nome = scanner.nextLine();
         }
 
